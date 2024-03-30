@@ -1,0 +1,23 @@
+/* .st-emotion-cache-1krjjuc.e1f1d6gn2  */
+/* .st-emotion-cache-v4lqap.e1f1d6gn2 */
+/* .st-emotion-cache-1wmy9hl.e1f1d6gn1 */
+/* .st-emotion-cache-11l0si0.e1f1d6gn2 */
+.st-emotion-cache-131990t.e1f1d6gn2
+{
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #7E99AB;
+}
+.diagnosis {
+    color: #fff;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+  }
+  
+  .diagnosis.benign {
+    background-color: #01DB4B
+  }
+  
+  .diagnosis.malicious {
+    background-color: #ff4b4b
+  }
