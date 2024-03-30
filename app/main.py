@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import numpy as np
 
 def get_clean_data():
-    data= pd.read_csv("../data/data.csv")
+    data= pd.read_csv("data/data.csv")
     data = data.drop(["Unnamed: 32","id"], axis=1)
     data['diagnosis'] = data['diagnosis'].map({"M":1, "B":0})
     return data
@@ -131,8 +131,8 @@ def get_radar_chart(input_data):
 
 def add_predictions(input_data):
 
-    model=pickle.load(open("../model/model.pkl", "rb"))
-    scaler=pickle.load(open("../model/scaler.pkl", "rb"))
+    model=pickle.load(open("model/model.pkl", "rb"))
+    scaler=pickle.load(open("model/scaler.pkl", "rb"))
 
     #we are converting all the data from the sliders into a single array with values
 
@@ -176,7 +176,7 @@ def main():
 
     #streamlit does not allow css to be added
     #this is a workaround which imports css file as a markdown file and allows the parsing of html
-    with open("../assets/style.css") as f:
+    with open("assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
     input_data = add_sidebar()
