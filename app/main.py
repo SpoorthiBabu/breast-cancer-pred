@@ -176,7 +176,7 @@ def main():
 
     #streamlit does not allow css to be added
     #this is a workaround which imports css file as a markdown file and allows the parsing of html
-    with open("../assests/style.css") as f:
+    with open("../assets/style.css") as f:
         st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
     input_data = add_sidebar()
