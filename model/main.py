@@ -29,7 +29,7 @@ def create_model(data):
 
 
 def get_clean_data():
-    data= pd.read_csv("../data/data.csv")
+    data= pd.read_csv("data/data.csv")
     data = data.drop(["Unnamed: 32","id"], axis=1)
     data['diagnosis'] = data['diagnosis'].map({"M":1, "B":0})
     return data
@@ -39,10 +39,10 @@ def main():
     model, scaler = create_model(data)
     #we are going to be cutting this model into pieces, export it in a binary file, import it into out application
 
-    with open('../model/model.pkl', 'wb') as f:
+    with open('model/model.pkl', 'wb') as f:
         pickle.dump(model, f)
         
-    with open('../model/scaler.pkl', 'wb') as f:
+    with open('model/scaler.pkl', 'wb') as f:
         pickle.dump(scaler, f)
 
 if __name__ == '__main__':
